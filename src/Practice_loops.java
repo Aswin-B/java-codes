@@ -70,5 +70,41 @@ public class Practice_loops {
             }
             nearest_num--;
         }
+
+        // While loop examples:
+
+        // Sum of the numbers entered by the user and end by an -ve value. Only -ve int needs
+        // to be added.
+
+        double user_num, sum=0.0;
+        System.out.println("Enter Any numbers to get the Sum: ");
+
+        while(true){
+            user_num = scanner.nextDouble();
+            if(user_num < 0.0){
+                break;
+            }
+            else{
+                sum = sum + user_num;
+            }
+        }
+        System.out.println("The sum of Entered numbers is " + sum);
+
+        int arr[] = {1,2,3,4,5,6};
+
+        for(int i=0; i<arr.length; i++){
+            System.out.println(arr[i]);
+        }
+
+        int arr2[] = new int[6];
+        System.out.println("Enter the numbers for 6 elements in the array");
+        for(int i=0; i<arr2.length; i++){
+            arr2[i] = scanner.nextInt();
+        }
+
+        for(int i=0; i<arr2.length; i++){
+            System.out.println(arr2[i]);
+        }
+
     }
 }
