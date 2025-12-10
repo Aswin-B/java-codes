@@ -106,5 +106,13 @@ public class Practice_loops {
             System.out.println(arr2[i]);
         }
 
+        // Foreach loop:
+
+        int[] arr3 = {1,2,3,4,5,6};
+
+        for(int p : arr3){
+            System.out.println("The element is " + p);
+        }
+
     }
 }
