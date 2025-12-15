@@ -1,14 +1,24 @@
 package OOP;
 
 public class Stack {
-    int[] s = new int[10];
-    int tos;
+    private int[] s = new int[10];
+    private int tos;
+    static int stackCount;
 
     Stack(){
         tos = -1;
+        stackCount++;
     }
 
-    void push(int item){
+    static{
+        stackCount = 0;
+    }
+
+    static int displayCount(){
+        return stackCount;
+    }
+
+    public void push(int item){
         if(tos == (s.length - 1)){
             System.out.println("Stack is Fully loaded and unable to push and TOS is " + tos);
         }
@@ -18,7 +28,7 @@ public class Stack {
         }
     }
 
-    int pop(){
+    public int pop(){
         if(tos > -1)
             return s[tos--];
         else{

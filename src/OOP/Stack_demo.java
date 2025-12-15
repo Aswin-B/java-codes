@@ -26,5 +26,11 @@ public class Stack_demo {
         System.out.println(s1.pop());
         System.out.println(s1.pop());
 
+        Stack s2 = new Stack();
+
+        s2.push(10);
+
+        System.out.println(Stack.displayCount());
+
     }
 }
