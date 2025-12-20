@@ -1,7 +1,7 @@
 package inheritanceOOPS;
 
 class companyEmployee{
-    private String empName;
+    protected String empName;
     private String empId;
     private double salary;
 
@@ -23,6 +23,20 @@ class companyEmployee{
         return this.salary;
     }
 
+    public boolean equals(Object obj){
+        if(this == obj){
+            return true;
+        }
+        else if (obj == null){
+            return false;
+        }
+        else if(this.getClass() != obj.getClass()){
+            return false;
+        }
+        companyEmployee e = (companyEmployee) obj;
+        return this.empName.equals(e.empName) && this.salary == e.salary && this.empId == e.empId;
+    }
+
 }
 
 class companyManager extends companyEmployee{
@@ -33,6 +47,7 @@ class companyManager extends companyEmployee{
     }
 
     public double getSalary(){
+
         return super.getSalary() + this.bonus;
     }
 
@@ -64,6 +79,8 @@ public class InheritanceDemo2 {
 
         companydhu d1 = new companydhu("Varun", "DHU101", 80000, 10000, 1000);
         System.out.println(d1.getSalary());
+
+        System.out.println(e1.equals(e2));
 
     }
 }
